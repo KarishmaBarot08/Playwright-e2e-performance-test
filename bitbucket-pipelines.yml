@@ -1,0 +1,24 @@
+image: mcr.microsoft.com/playwright:v1.48.2-focal
+
+pipelines:
+  custom:
+    e2e-tests:
+      - variables:
+          - name: TENANT
+            default: 'syracuse'
+            allowed-values: ['libertyuni','syracuse']
+      - stage:
+          name: Test
+          steps:
+            - step:
+                name: Run Playwright Tests
+                caches:
+                  - node
+                script:
+                  - npm install # Install all dependencies, including dotenv
+                  - npx playwright install-deps # Install Playwright dependencies for Docker
+                  - npx playwright install chrome # Install Chrome for Playwright
+                  - npx playwright test
+
+options:
+  max-time: 10

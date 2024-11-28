@@ -1,0 +1,25 @@
+{
+  "name": "sidearm-e2e-tests",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://karishmabarot@bitbucket.org/sidearmsports/sidearm-e2e-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/sidearmsports/sidearm-e2e-tests/issues"
+  },
+  "homepage": "https://bitbucket.org/sidearmsports/sidearm-e2e-tests#readme",
+  "dependencies": {
+    "@playwright/test": "^1.48.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.48.2"
+  }
+}
